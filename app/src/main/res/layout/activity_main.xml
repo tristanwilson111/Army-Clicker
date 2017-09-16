@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.icaninteractive.tristan.armyclicker.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <Button
+        android:id="@+id/dollarButton"
+        android:layout_width="140dp"
+        android:layout_height="112dp"
+        android:text="$$$"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="17dp"
+        app:layout_constraintTop_toBottomOf="@+id/currencyCount"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+        android:layout_width="336dp"
+        android:layout_height="17dp"
+        android:progress="100"
+        android:layout_marginStart="7dp"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="@+id/armyHealth"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toRightOf="@+id/armyHealth"
+        android:layout_marginLeft="7dp"
+        android:layout_marginBottom="0dp" />
+
+    <TextView
+        android:id="@+id/currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:text="Dollars ($) :   "
+        app:layout_constraintBaseline_toBaselineOf="@+id/currencyCount"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1" />
+
+    <TextView
+        android:id="@+id/armyHealth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Health: "
+        android:layout_marginStart="7dp"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="31dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/currencyCount"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginBottom="420dp"
+        app:layout_constraintBottom_toTopOf="@+id/soldierCount"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/soldierCount"
+        app:layout_constraintRight_toRightOf="@+id/soldierCount"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="61dp"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/soldier"
+        app:layout_constraintRight_toLeftOf="@+id/tankImage"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="62dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="54dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tankImage" />
+
+    <ImageView
+        android:id="@+id/tankImage"
+        android:layout_width="57dp"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/tank"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/tankCount"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/tankCount"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintLeft_toRightOf="@+id/tankCount" />
+
+    <ImageView
+        android:id="@+id/planeImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/plane"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintRight_toRightOf="@+id/buyPlane"
+        android:layout_marginTop="3dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintLeft_toLeftOf="@+id/buyPlane"
+        app:layout_constraintTop_toTopOf="@+id/tankImage" />
+
+    <TextView
+        android:id="@+id/soldierCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/hireSoldier"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@+id/hireSoldier"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/hireSoldier" />
+
+    <TextView
+        android:id="@+id/tankCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="41dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="78dp"
+        app:layout_constraintLeft_toLeftOf="@+id/buyTank" />
+
+    <Button
+        android:id="@+id/hireSoldier"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:text="Hire Soldier"
+        android:layout_marginStart="55dp"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="1dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buyTank" />
+
+    <Button
+        android:id="@+id/buyTank"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:text="Buy Tank"
+        android:layout_marginStart="22dp"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/tankCount"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toRightOf="@+id/hireSoldier" />
+
+    <Button
+        android:id="@+id/buyPlane"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:text="Buy Plane"
+        android:layout_marginStart="22dp"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="16dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toTopOf="@+id/textView9"
+        app:layout_constraintLeft_toRightOf="@+id/buyTank" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$100"
+        android:layout_marginEnd="25dp"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/hireSoldier"
+        app:layout_constraintRight_toRightOf="@+id/hireSoldier" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$500"
+        android:layout_marginStart="24dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/hireSoldier"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/buyTank"
+        app:layout_constraintTop_toTopOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$1000"
+        android:layout_marginEnd="23dp"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/buyTank"
+        app:layout_constraintRight_toRightOf="@+id/buyPlane" />
+
+    <TextView
+        android:id="@+id/planeCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginEnd="26dp"
+        app:layout_constraintRight_toRightOf="@+id/planeImage"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/buyPlane" />
+
+</android.support.constraint.ConstraintLayout>
